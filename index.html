@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D Ping Pong Multiplayer</title>
+    <style>
+        /* Styles for the game */
+        body {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #gameCanvas {
+            background-color: #000;
+            display: block;
+            margin: 0 auto;
+        }
+        #menu {
+            margin: 20px;
+        }
+        #menu input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #menu button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>2D Ping Pong Multiplayer</h1>
+    <div id="menu">
+        <button onclick="createRoom()">Create Room</button>
+        <input type="text" id="roomInput" placeholder="Enter Room Code">
+        <button onclick="joinRoom()">Join Room</button>
+    </div>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <!-- Include Socket.IO and our game script -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
